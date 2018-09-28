@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 15pt;
+        }
+    </style>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   <!-- <script src="js/bootstrap.min.js" type="text/javascript"></script>-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+            
+            $(document).ready(function () {
+               
+                document.getElementById('player-name').innerHTML =sessionStorage.getItem('Userid');
+                
+               
+
+            });
+        </script>
+    
+<script type="text/javascript">
+     $(document).ready(function () {
+         var msgs=sessionStorage.getItem('Id');
+           jQuery.ajax({
+               url: "http://66.199.242.90/sgm_android/WebService.asmx/GetFacilityUserSites?FUserId="+msgs+"",
+               dataType: 'json',
+               success: function (response) {
+                   //debugger;
+                   var res=response;
+                   for(var i=0; i<res.length;i++){
+                       var inc=i;
+                       $("#drp1").append($("<option></option>").val(res[inc].site_id).html(res[inc].site_code +' - '+ res[inc].site_name)); 
+                   }
+                         
+           
+
+               },
+               errror: function(response){
+                   alert('fail to send');
+               }
+
+           });
+       });
+    </script>
+ 
+ 
+<script type = "text/javascript">
+       $(document).ready(function () {
+           jQuery.ajax({
+               url: "http://66.199.242.90/sgm_android/WebService.asmx/getHK_NonTech_FS_Data",
+               dataType: 'json',
+               success: function (response) {
+                   var res=response;
+                   $('#drp3').empty();
+                   $('#drp3').append($('<option>', {value:0, text:'Select'}));
+                   for(var i=0; i<res.length;i++){
+                       var inc=i;
+                       $("#drp3").append($("<option></option>").val(res[inc].ID).html(res[inc].Name)); 
+                   }
+               },
+           });
+       });
+
+    </script>    
+
+
+
+
+
+    <script type = "text/javascript">
+    function redirect_success() {
+           swal({
+            title: "Success",
+             text: "Detail's Saved ! Click on Ok to proceed .",
+             icon: "success",
+            })
+           .then(function() {
+            window.location.href = ("ntechnical.html");
+            });
+           }
+
+
+       $(document).ready(function () {
+       $("#submit").click(function(){
+       var siteid = $("#drp1").val();
+       var checkpoint = $("#drp3").val();
+       var Fuserid = sessionStorage.getItem('user_type');
+       var fremark = $("#txtarea").val();
+       jQuery.ajax({
+       type:"Get",
+               url: "http://66.199.242.90/sgm_android/WebService.asmx/InsUpNTFacilitySuport?SiteID="+siteid+"&ChkPointId="+checkpoint+"&FUserId="+Fuserid+"&Remark="+fremark,
+               dataType: 'json',
+               success: function (response) {
+               var res = response;
+                  if(res = "success")
+                  {
+                  redirect_success();
+//                  swal("Success!", "We Have Saved Your FeedBack!", "success");
+                  }
+                  else
+                  {
+                  swal("Sorry!", "We are unable to save your feedback!", "error");
+                  }
+               },
+           });
+           });
+       });
+
+    </script>
+     <style>
+
+            .panel-title a {
+                text-decoration: none !important;
+                font-size: 14px !important;
+                font-weight: 600 !important;
+            }
+            .panel-title a:hover {
+                color: #1188cc;
+            }
+            .middle{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            body {
+                font-family: "Lato", sans-serif;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #ccc;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+                
+                border-bottom: 1px solid #888;
+                border-top: 1px solid #eee;
+            }
+
+            .sidenav a:hover {
+                color: #333;
+                background-color: #bbb;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+         #drp1 {
+             
+  
+  text-align: center !important;
+      padding: 3px;
+    color: #000;
+    font-size: 15px;
+   background-color: #82caff;
+    -webkit-appearance: none;
+             
+
+}
+          #drp2 {
+    padding: 4px;
+    color: #000;
+    font-size: 12px;
+    background:  ;
+    -webkit-appearance: none;
+
+}
+          #drp3 {
+    padding: 4px;
+    color: #000;
+    font-size: 12px;
+    background: ;
+    -webkit-appearance: none;
+
+}
+.topnav {
+  overflow: hidden;
+  background-color: #ededed;
+}
+.button1 {
+    background-color: #914AC0; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+         .button2 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+      .box{
+                height: 70%;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #eee;
+                
+                box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                margin-top: 40px;
+                
+            }
+
+         
+        </style>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            function redT() {
+                
+                window.location="ntechnical.html";
+            }
+        </script>
+</head>
+<body background-color:MediumSeaGreen>
+   <div class="topnav">
+ <div id="mySidenav" class="sidenav pull-left">
+            <a style="border: none !important; background: none !important;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div style="text-align:center"> <b>WELCOME:-<span style="font-size:15px;cursor:pointer"id="player-name"></span></b></div>
+            
+     <div style="text-align:center"><b><a href="services.html">Technical Services</a></b> </div>
+     
+      <div style="text-align:center"><b><a href="ntechnical.html">Non-Technical Services</a></b> </div>
+   
+           
+     <div style="text-align:center"><b><a href="index.html">Logout</a></b></div>
+       
+       
+     <div class="" style="position:absolute; bottom: 80px; left: 50%; margin-left: -49px;">
+            <img src="assets/images/logo.png" style="height: 40px; width: 98px;">
+        </div>
+        
+        
+        </div>
+    
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
+  
+</div>
+    <br>
+     <div class="box">
+    <div style="text-align:center">
+            
+            <b>Select Site:-<select id = "drp1"  style="width:200px;"> </select></b>
+    </div>
+            
+    <br />
+            
+           
+        <br>
+                <br>
+        
+            <div style="text-align:center">
+            <b>Select Problem Area<select id = "drp3" style="width:237px;"> </select>
+            </div>
+           <br>
+                <br>
+                <br>
+                <div style="text-align:center">
+                <b>Enter Remarks</b>
+            </div>
+            <div style="text-align:center">
+            <textarea id = "txtarea" style="width:237px;" rows="5"></textarea>
+            </div>
+                <br>
+                <br>
+                <br>
+                <br>
+        <div style="text-align:center">
+            <input name='back' class='button2' type='submit' id = "back" value='Back' onclick="redT()"></input>
+                            <input name='Support' class='button1' type='submit' id = "submit" value='Submit'></input>
+  
+            </div>
+         <br>
+         <div  style="text-align: center; color: #17202A;">
+                <b> &copy; All Rights Reserved, APS Group</b>
+                </div> 
+            <br />
+         
+            
+    
+ 
+    </div>
+      <br>
+
+  
+</body>
+</html>

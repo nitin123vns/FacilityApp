@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style>
+
+            .panel-title a {
+                text-decoration: none !important;
+                font-size: 14px !important;
+                font-weight: 600 !important;
+            }
+            .panel-title a:hover {
+                color: #1188cc;
+            }
+            .middle{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            body {
+                font-family: "Lato", sans-serif;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #ccc;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+                
+                border-bottom: 1px solid #888;
+                border-top: 1px solid #eee;
+            }
+
+            .sidenav a:hover {
+                color: #333;
+                background-color: #bbb;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+.topnav {
+  overflow: hidden;
+  background-color: #ededed;
+}
+
+        </style>
+
+    </head>
+    <body>
+<div class="topnav">
+<div class="container">
+ <div id="mySidenav" class="sidenav pull-left">
+            <a style="border: none !important; background: none !important;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div style="text-align:center"> <b>WELCOME:-<span style="font-size:15px;cursor:pointer"id="player-name"></span></b></div>
+            
+     <div style="text-align:center"><b><a href="services.html">Technical Services</a></b> </div>
+     <div style="text-align:center"><b> <a href="services.html">Non-Technical Services</a></b></div>
+           
+     <div style="text-align:center"><b><a href="index.html">Logout</a></b></div>
+       
+       
+       <div class="" style="position:absolute; bottom: 20px; left: 50%; margin-left: -49px;">
+            <img src="assets/images/logo.png" style="height: 40px; width: 98px;">
+        </div>
+        
+        
+        </div>
+        
+        
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
+  
+</div>
+
+        <br><br>
+
+
+
+
+        <div class="container">
+            <h4>Office Equipments </h4>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title" >
+                            <a  data-toggle="collapse" href="#collapse1">DG SET <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the DG if it is in manual or auto mode </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the canopy condition of the DG </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the Earthing condition of DG</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the fuel filter for any leakage </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the charger of the DG </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the engine oil of the DG </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the coolant level and concentration in the radiator </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the DG in the running condition for white fumes </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the DG for any abnormal noise or any combustible material is not dumped near by to it </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the DG Vbelt tension </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the air filter , breather </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2">Servo <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the physical condition of the servo make sure its free from dust </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the level of oil in the tank </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the connections of the wires in servo it should be tight  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the servo for any leakages  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the dielectric constant of the oil in servo it should be less than 10 ohm  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check voltage and current parameters  of the servo  </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse3">UPS <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the UPS for any loose connections or burnt insulation</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the UPS for any alarm history if any</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the running load of the UPS  it should not be more than 45 % of the total KVA</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the UPS for any abnormal alarms </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the temperature  and relative humidity of the UPS room</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the UPS for back time and back up load in case of power outages </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse4">Battries <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the batteries condition of the UPS </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the charging voltage of the batteries it should be 13.5 to 14 volt during charging </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the batteries for any leakages </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the terminals of the batteries so that there is no loose connection  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check when was the last battery back up or run load test conducted </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse5">Photocopier <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse5" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the photocopier machine if supply is proper  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the physical condition of the photocopier </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the photocopier for any trouble other than functional troubles like paper jam , toner empty  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the wiring for any loose or burnt insulation   </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse6">LCD Projectors  <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse6" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the projector if supply is proper </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the physical condition of the projector and is it permanently fitted in ceiling  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the projector of any trouble other than functional troubles </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> check the wiring for any loose or burnt insulation   </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse7">Microwave <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse7" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the microwave if supply is proper </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the physical condition of the microwave </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the microwave for any trouble like heating problems , fumes coming out , burnt smell </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> check the wiring for any loose or burnt insulation   </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse8">Refrigerator <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse8" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the Refrigerator if supply is proper </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the physical condition of the Refrigerator </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the Refrigerator for any trouble like heating problems , fumes coming out , burnt smell </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> check the wiring for any loose or burnt insulation   </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse9">RO/ Dispenser <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse9" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the RO if supply is proper </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the physical condition of the RO </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the RO for any trouble like cooling / heating </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> check the wiring for any loose or burnt insulation   </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse10">Tea / Coffee vending machine <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse10" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the machine if supply is proper </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the physical condition of the machine </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the machine for any trouble like cooling / heating </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> check the wiring for any loose or burnt insulation   </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse11">Air Conditioner <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse11" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the power supply in AC's </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check and clean the filter of theAC's </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check for any leakage or seepage through drain pipe</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the out door unit for the working of exhaust fan and contacter switch  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the functioning of ac working or not any troubles related to it  </label></div>
+
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <h4>Office Safety </h4>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse12">Fire Extinguisher  <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse12" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check all the Fire Extinguisher the pressure pointer should be in Green area </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the next refilling date .Check whether pressure guage regulator's needle is in green zone for ABC(Dry Powder) type and for BC(CO2) type, gross weight loss should not be more then 10% </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the Fire extinguisher for safety pins release and fire extinguisher hose pipe</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the fire extinguisher are easily available in critical areas such as server room , main panel etc and signage's are present in all areas</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check for any dent , cracks , rust or any other sign of damage </label></div>
+
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse13">Fire panel <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse13" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the fire panel is working and is in active mode or not to be checked with incense sticks </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the fire panel is raising alarms or hooters in case of trouble or emergencies </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check whether the panel is getting reset after trouble or not </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check alarm is audible to all area of the premises</label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse14">Fire Evacuation plan  <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse14" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check if it is applicable </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check if signages are present for emergency  exit or not </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the emergency exit route is not obstructed with any thing </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the emergency exit route is easily accessible </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse15">Fire Indicators  <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse15" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check if they are working and and detect fire emergencies  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value="">Check if they are triggering the panel for alarm or hooter </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check if they are blinking  </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <br><br>
+                <h4>Condition of chairs & sofa </h4>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse16">ADM chairs  <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse16" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the chairs or any damage , broken parts , hydraulic issues or fabric change   </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse17">Training chairs <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse17" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the chairs or any damage , broken parts , hydraulic issues or fabric change  </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse18">Pantry chairs <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse18" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the chairs or any damage , broken parts , hydraulic issues or fabric change  </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse19">Sofas <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse19" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the chairs or any damage , broken parts , hydraulic issues or fabric change  </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse20">Office head chairs <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse20" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the chairs or any damage , broken parts , hydraulic issues or fabric change  </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br><br>
+                <h4>Washroom  </h4>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse21">Plumbing and Drainage  <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse21" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check for any water leakage from tap /fittings </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check taps / fixtures of proper mounting </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the urinals /WC /vanity counter /washbasin etc for proper mounting / functioning</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check hand shower or tap for proper functioning </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check water inlet is proper and is functioning </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check drainage system ensure no leakage or clogging </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the washroom fixtures like jet spray stand ,toilet roll stand etc are fixed and properly mounted</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the soap dispensers are properly mounted and functioning  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check the tap /urinal sensors in wash room are working </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br><br>
+                <h4>Office Interiors  </h4>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse22">Carpentry <i class="glyphicon glyphicon-chevron-down pull-right"></i></a>
+                        </h4>
+                    </div>
+                    <div id="collapse22" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check all the work station area </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check drawer for proper functioning </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check locks for proper functioning </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Overhead boxes  </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check white boards are properly mounted and in good condition </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check door  / door closer/ hinges  for proper functioning </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check door handle / stopper for proper functioning </label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Ensure wall hanging are properly mounted</label></div>
+                            <div class="checkbox"><label><input type="checkbox" value=""> Check glass fittings for any loose beading or dismantling or cracks </label></div>
+
+                            <br>
+                            <button class="btn btn-warning pull-left"><i class="glyphicon glyphicon-camera" ></i></button>
+                            <button class="btn btn-primary middle">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+
+
+    </body>
+</html>
